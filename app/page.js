@@ -205,7 +205,9 @@ export default function Home() {
           <p className="text-2xl font-bold">Your numbers</p>
           <div className="flex flex-row space-x-4 mb-4 mt-4">
             {selectedNumbers.map((number) => (
-              <p className="shadow-lg p-3 bg-gray-100 text-5xl font-bold text-orange-500">{number}</p>
+              <p className="shadow-lg p-3 bg-gray-100 text-5xl font-bold text-orange-500"
+                key={"s-" + number}
+              >{number}</p>
             ))}
           </div>
           <button
