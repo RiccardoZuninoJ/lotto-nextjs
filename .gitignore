@@ -9,6 +9,12 @@
 # testing
 /coverage
 
+# server
+.env.local
+draw_compiuled.js
+draw_extractor.mjs
+draw_generator.mjs
+
 # next.js
 /.next/
 /out/
