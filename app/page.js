@@ -251,13 +251,17 @@ export default function Home() {
           space-x-4
         '>
           {lastDraws.map((draw) => (
-            <div className="shadow-lg p-3 bg-gray-100 text-orange-500">
+            <div className="shadow-lg p-3 bg-gray-100 text-orange-500"
+              key={'d-' + draw.id}
+            >
               <p className="text-2xl font-bold">Draw #{draw.id}</p>
               <p className="text-xl">Draw date: {moment(draw.draw_datetime).format('DD/MM/YYYY HH:mm')}</p>
               <div className="text-xl mb-4"><p>Drawn numbers:</p> <p
                 className='mt-5'
               >{draw.results ? JSON.parse(draw.results).map((number) => (
-                <span className='mr-4 bg-gray-800 text-2xl font-bold text-orange-500 p-3 rounded-xl'>{number}</span>
+                <span
+                  key={'r-' + number}
+                  className='mr-4 bg-gray-800 text-2xl font-bold text-orange-500 p-3 rounded-xl'>{number}</span>
               )) : 'Draw not done yet'}</p></div>
             </div>
           ))}
